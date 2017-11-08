@@ -25,7 +25,7 @@ export function addUserByUrl({ url }) {
 export function addUser(firstname,lastname,username,password,Email) {
   return async (dispatch, getState, api) => {
    const { isConnected } = getState();
-   newUserUrl=`action=addUser&ifname=`+firstname+`&lname=`+lastname+`&username=`+username+`&password=`+password+`&activeflag=1&email=`+Email+``;
+   newUserUrl=`action=addUser&fname=`+firstname+`&lname=`+lastname+`&username=`+username+`&password=`+password+`&activeflag=1&email=`+Email+``;
     if (isConnected != 'NONE') {
 
  
