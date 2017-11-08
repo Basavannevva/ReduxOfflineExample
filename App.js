@@ -12,13 +12,17 @@ class App extends Component {
     };
   }
 
+  componentWillMount() {
+    console.disableYellowBox = true;
+  }
+
   render() {
-   if (this.state.isLoading) return null;
-   return (
-     <Provider store={this.state.store}>
-       <Screens />
-     </Provider>
-   );
+    if (this.state.isLoading) return null;
+    return (
+      <Provider store={this.state.store}>
+        <Screens />
+      </Provider>
+    );
   }
 }
 
